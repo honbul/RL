@@ -1,0 +1,7 @@
+{
+  "dsl_schema_error": 515,
+  "invalid_source_path": 2,
+  "json_parse_error": 10,
+  "partial_value_mismatch": 2,
+  "truncated_output": 10
+}

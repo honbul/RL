@@ -1,0 +1,11 @@
+platform=Linux-7.0.0-28-generic-x86_64-with-glibc2.39
+policy_gpu=NVIDIA RTX 4090 physical:0
+rollout_gpu=NVIDIA RTX 4090 physical:1
+torch=2.8.0
+transformers=4.57.6
+trl=0.29.1
+peft=0.20.0
+datasets=4.8.5
+vllm=0.11.0
+policy_peak_vram_mb=19629.25
+rollout_peak_vram_mb=22741.56

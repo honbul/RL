@@ -1,0 +1,11 @@
+{
+  "max_prompt_tokens": 685,
+  "policy_peak_vram_mb": 19629.25,
+  "rollout_peak_vram_mb": 22741.5625,
+  "total_flos": 0.0,
+  "train_loss": -0.03257507629362817,
+  "train_rows": 4000,
+  "train_runtime": 8553.928,
+  "train_samples_per_second": 0.468,
+  "train_steps_per_second": 0.234
+}

@@ -60,3 +60,16 @@
 - Final setting: `per_device_train_batch_size=8`, `gradient_accumulation_steps=1`, `generation_batch_size=8`, `num_generations=4`, `steps_per_generation=1`
 - Dataset contract correction: first E3 launch reached 1/2,000 steps before nested Arrow expansion was stopped and archived; schema/hidden columns were changed to JSON strings, reducing 4,000-row dataset construction to 0.238s, and a fresh 1-step two-GPU smoke passed
 - Next: E3 binary GRPO
+
+## Stage 5 — E3/E4 GRPO
+
+- Status: completed and raw-rescored
+- Formal source: `98c09a9de65785caebf625722e52c9698581fbde`
+- Completed: E3 binary GRPO and E4 dense GRPO, 2,000 steps each; 16,000 rollout rows and 3,000 evaluation rows per run; all four evaluation splits
+- Commands: `PYTHONHASHSEED=42 .venv/bin/python -m src.train_grpo --config configs/grpo_binary.yaml`; `PYTHONHASHSEED=42 .venv/bin/python -m src.train_grpo --config configs/grpo_dense.yaml`; `.venv/bin/python -m src.evaluate --run-dir <run-dir> --all-splits --physical-gpu 1`; `.venv/bin/python -m src.rescore --run-dir <run-dir>`
+- Result: E3 exact IID/Linguistic/Compositional/Structural = 0.461/0.482/0.084/0; E4 = 0.449/0.448/0.074/0
+- Training: E3 loss -0.032575, policy/rollout peak 19,629.25/22,741.56MB, 8,553.93s; E4 loss -0.048465, policy/rollout peak 24,135.25/22,350.25MB, 8,475.62s
+- Reward: E3 rollout mean 0.365563 with 5,849/16,000 nonzero; E4 rollout mean 0.386244 with 15,806/16,000 nonzero
+- Additional seeds: skipped because neither E3 nor E4 exceeded E2 Compositional OOD Problem Pass@1 of 0.568
+- Commit: recorded in the next progress update after publication
+- Next: build E0–E4 summary, failure table, final report, and remote readback
