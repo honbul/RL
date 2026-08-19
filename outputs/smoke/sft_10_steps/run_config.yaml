@@ -1,0 +1,24 @@
+bf16: true
+config_path: configs/sft_1k.yaml
+data_path: data/sft/sft_1k.jsonl
+git_commit: 805b2366e823a04e7e0c288e71262d21161a64ed
+gradient_accumulation_steps: 16
+gradient_checkpointing: true
+learning_rate: 2.0e-05
+limit: 100
+lora:
+  alpha: 32
+  dropout: 0.05
+  r: 16
+max_completion_tokens_observed: 115
+max_length: 2304
+max_prompt_tokens_observed: 683
+max_steps_override: 10
+model_config: configs/model.yaml
+num_train_epochs: 1
+output_dir: outputs/smoke/sft_10_steps
+per_device_train_batch_size: 1
+physical_gpu: 0
+rows: 100
+run_id: e1_sft_1k_seed42
+seed: 42

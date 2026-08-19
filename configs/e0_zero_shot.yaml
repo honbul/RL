@@ -1,0 +1,8 @@
+run_id: e0_zero_shot_seed42
+model_config: configs/model.yaml
+output_dir: outputs/e0_zero_shot
+adapter_path: null
+seed: 42
+physical_gpu: 1
+max_completion_length: 256
+gpu_memory_utilization: 0.85

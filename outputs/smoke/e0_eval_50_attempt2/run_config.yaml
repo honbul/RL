@@ -1,0 +1,10 @@
+adapter_path: null
+config_path: configs/e0_zero_shot.yaml
+git_commit: 805b2366e823a04e7e0c288e71262d21161a64ed
+gpu_memory_utilization: 0.85
+max_completion_length: 256
+model_config: configs/model.yaml
+output_dir: outputs/e0_zero_shot
+physical_gpu: 1
+run_id: e0_zero_shot_seed42
+seed: 42

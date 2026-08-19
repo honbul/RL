@@ -7,4 +7,5 @@ accelerate>=1.10,<2
 pydantic>=2.10,<3
 PyYAML>=6,<7
 jsonschema>=4.23,<5
+nvidia-ml-py>=13,<14
 vllm>=0.11,<0.14
