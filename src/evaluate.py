@@ -5,6 +5,7 @@ import json
 import os
 import platform
 import statistics
+import sys
 import time
 from collections import Counter
 from pathlib import Path
@@ -76,6 +77,14 @@ def main() -> None:
     config = load_yaml(config_path)
     model_config = load_yaml(Path(config["model_config"]))
     physical_gpu = args.physical_gpu if args.physical_gpu is not None else int(config.get("physical_gpu", 1))
+    if os.environ.get("CUDA_VISIBLE_DEVICES") != str(physical_gpu):
+        environment = os.environ.copy()
+        environment["CUDA_VISIBLE_DEVICES"] = str(physical_gpu)
+        os.execvpe(
+            sys.executable,
+            [sys.executable, "-m", "src.evaluate", *sys.argv[1:]],
+            environment,
+        )
     require_idle_gpu(physical_gpu)
     configure_compiler()
     os.environ["CUDA_VISIBLE_DEVICES"] = str(physical_gpu)
@@ -175,13 +184,16 @@ def main() -> None:
                 hidden_total += len(row["hidden_tests"])
                 target_schema_passed += schema_pass_count
                 field_f1_total += row_f1
+                field_expected += sum(
+                    len(flatten_leaves(hidden_case["expected"]))
+                    for hidden_case in row["hidden_tests"]
+                )
                 for case_result, hidden_case in zip(scored.hidden_case_results, row["hidden_tests"]):
                     if "predicted" not in case_result:
                         continue
                     predicted_leaves = flatten_leaves(case_result["predicted"])
                     expected_leaves = flatten_leaves(hidden_case["expected"])
                     field_predicted += len(predicted_leaves)
-                    field_expected += len(expected_leaves)
                     field_true_positive += sum(
                         1
                         for path, value in predicted_leaves.items()
