@@ -38,5 +38,5 @@
 - Major files: `src/train_sft.py`, `src/train_grpo.py`, `src/evaluate.py`, `src/gpu.py`, `requirements-lock.txt`, `environment.txt`, `outputs/smoke/`
 - Result: SFT 10/10 steps PASS (peak 20,622.56MB); E0 vLLM 50 rows PASS; SFT adapter vLLM 50 rows PASS; binary GRPO 10/10 steps and 40 rollouts PASS (policy 9,905.25MB, rollout 22,350.25MB); all smoke rewards were 0.0, so smoke establishes execution only
 - Runtime fallback: vLLM required a local C compiler and Python headers; compiler closure was fixed before the successful attempts; server mode then passed and no Transformers-generation fallback was used
-- Commit: recorded in the next progress update after publication
+- Commit: `e2b150c960fdb9054214d2971d7cdc912c7b7431`
 - Next: run E0, E1, and E2 completely and publish their raw outputs

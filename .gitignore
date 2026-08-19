@@ -11,3 +11,4 @@ wandb/
 optimizer*/
 outputs/**/adapter/
 outputs/**/checkpoint-*/
+outputs/**/vllm_server.log
