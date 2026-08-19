@@ -50,5 +50,12 @@
 - Result: E0 exact IID/Linguistic/Compositional/Structural = 0/0/0/0; E1 = 0.171/0.158/0.001/0; E2 = 1.000/1.000/0.568/0
 - Training: E1 loss 0.539731, peak 24,373.25MB, 207.24s; E2 loss 0.078594, peak 24,525.25MB, 1,239.40s
 - Metric correction: field-micro originally omitted expected leaves on parse failures; raw generations were unchanged and E0/E1/E2 metrics were deterministically recomputed by `src.rescore`
-- Commit: recorded in the next progress update after publication
+- Commit: `f4e0cca34dfb79f988e8486c4b84165466c2f57e`
 - Next: run E3 binary and E4 dense GRPO from the E1 adapter, then evaluate both on all four splits
+
+## Stage 5 preflight — GRPO batch topology
+
+- Status: PASS; formal setting frozen
+- Result: batch 8 processed two prompt groups per step at 1.747 samples/s with policy peak 11,989.25MB; batch 16 reached 1.888 samples/s but policy peak 22,901.25MB, so batch 8 was selected for safe headroom
+- Final setting: `per_device_train_batch_size=8`, `gradient_accumulation_steps=1`, `generation_batch_size=8`, `num_generations=4`, `steps_per_generation=1`
+- Next: E3 binary GRPO
