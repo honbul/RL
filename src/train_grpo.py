@@ -128,9 +128,9 @@ def main() -> None:
         dataset_rows.append({
             "prompt": model_prompt,
             "sample_id": row["sample_id"],
-            "source_schema": row["source_schema"],
-            "target_schema": row["target_schema"],
-            "hidden_tests": hidden_by_id[row["sample_id"]],
+            "source_schema_json": json.dumps(row["source_schema"], sort_keys=True, separators=(",", ":")),
+            "target_schema_json": json.dumps(row["target_schema"], sort_keys=True, separators=(",", ":")),
+            "hidden_tests_json": json.dumps(hidden_by_id[row["sample_id"]], sort_keys=True, separators=(",", ":")),
         })
     dataset = Dataset.from_list(dataset_rows)
     base_model = AutoModelForCausalLM.from_pretrained(
@@ -148,9 +148,9 @@ def main() -> None:
         prompts: list[str],
         completions: list[str],
         sample_id: list[str],
-        source_schema: list[dict[str, Any]],
-        target_schema: list[dict[str, Any]],
-        hidden_tests: list[list[dict[str, Any]]],
+        source_schema_json: list[str],
+        target_schema_json: list[str],
+        hidden_tests_json: list[str],
         trainer_state: Any,
         **_: Any,
     ) -> list[float]:
@@ -159,9 +159,9 @@ def main() -> None:
             for index, completion in enumerate(completions):
                 scored = score_completion(
                     completion,
-                    source_schema[index],
-                    target_schema[index],
-                    hidden_tests[index],
+                    json.loads(source_schema_json[index]),
+                    json.loads(target_schema_json[index]),
+                    json.loads(hidden_tests_json[index]),
                     config["reward"],
                 )
                 rewards.append(scored.reward)

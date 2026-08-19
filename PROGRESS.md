@@ -58,4 +58,5 @@
 - Status: PASS; formal setting frozen
 - Result: batch 8 processed two prompt groups per step at 1.747 samples/s with policy peak 11,989.25MB; batch 16 reached 1.888 samples/s but policy peak 22,901.25MB, so batch 8 was selected for safe headroom
 - Final setting: `per_device_train_batch_size=8`, `gradient_accumulation_steps=1`, `generation_batch_size=8`, `num_generations=4`, `steps_per_generation=1`
+- Dataset contract correction: first E3 launch reached 1/2,000 steps before nested Arrow expansion was stopped and archived; schema/hidden columns were changed to JSON strings, reducing 4,000-row dataset construction to 0.238s, and a fresh 1-step two-GPU smoke passed
 - Next: E3 binary GRPO
