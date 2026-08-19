@@ -82,5 +82,5 @@
 - Major files: `reports/benchmark_summary.csv`, `reports/failure_summary.csv`, `reports/final_report.md`, `src/summarize.py`
 - Result: E2 Compositional OOD exact 0.568 exceeded E3 0.084 and E4 0.074; final decision is **GRPO 이점 없음**
 - Additional seeds: not run because the preregistered improvement condition was false
-- Commit: recorded in the publication follow-up after the report commit
-- Next: final verification, report commit/push, remote SHA readback
+- Commit: `b8cd57b5d9c0ab7f1fb70eb267d4ac75d08d42fd`
+- Next: complete — all requested stages, raw outputs, reports, push, and remote readback are closed
