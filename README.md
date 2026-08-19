@@ -6,6 +6,14 @@ Train a 4B instruct model to emit an executable, restricted JSON transformation 
 
 The experiment is executed stage by stage on `experiment/synthetic-schema-rlvr`. See `PROGRESS.md` for exact commands and results.
 
+## Result
+
+The seed-42 experiment completed E0–E4. Compositional-OOD Problem Pass@1 was **0.568 for SFT-6K (E2)**, **0.084 for binary GRPO (E3)**, and **0.074 for dense GRPO (E4)**. The preregistered conclusion is **no GRPO advantage**; seed 43/44 repeats were skipped because neither GRPO arm exceeded E2.
+
+- Full report: `reports/final_report.md`
+- Benchmark table: `reports/benchmark_summary.csv`
+- Failure table: `reports/failure_summary.csv`
+
 ## Environment
 
 ```bash

@@ -71,5 +71,16 @@
 - Training: E3 loss -0.032575, policy/rollout peak 19,629.25/22,741.56MB, 8,553.93s; E4 loss -0.048465, policy/rollout peak 24,135.25/22,350.25MB, 8,475.62s
 - Reward: E3 rollout mean 0.365563 with 5,849/16,000 nonzero; E4 rollout mean 0.386244 with 15,806/16,000 nonzero
 - Additional seeds: skipped because neither E3 nor E4 exceeded E2 Compositional OOD Problem Pass@1 of 0.568
-- Commit: recorded in the next progress update after publication
+- Commit: `2aa7aba7224b89493aca7fc86e6ba34cb03101d7`
 - Next: build E0–E4 summary, failure table, final report, and remote readback
+
+## Stage 6 — Final comparison and report
+
+- Status: generated and verified
+- Completed: E0–E4 benchmark summary, run/split failure summary, cited raw examples, final report, reproduction commands
+- Commands: `.venv/bin/python -m src.summarize`
+- Major files: `reports/benchmark_summary.csv`, `reports/failure_summary.csv`, `reports/final_report.md`, `src/summarize.py`
+- Result: E2 Compositional OOD exact 0.568 exceeded E3 0.084 and E4 0.074; final decision is **GRPO 이점 없음**
+- Additional seeds: not run because the preregistered improvement condition was false
+- Commit: recorded in the publication follow-up after the report commit
+- Next: final verification, report commit/push, remote SHA readback
