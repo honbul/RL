@@ -1,0 +1,28 @@
+{
+  "candidate_count": 20000,
+  "counts": {
+    "dev": 500,
+    "grpo_hidden_tests": 4000,
+    "grpo_prompts": 4000,
+    "grpo_references": 4000,
+    "sft_1k": 1000,
+    "sft_6k": 6000,
+    "test_compositional_ood": 1000,
+    "test_iid": 1000,
+    "test_linguistic_ood": 500,
+    "test_structural_ood": 500
+  },
+  "hidden_cases": {
+    "evaluation": 32,
+    "grpo": 8
+  },
+  "leakage_checks": {
+    "compositional_signature_overlap_train": 0,
+    "graph_fingerprint_overlap_train_test": 0,
+    "linguistic_template_overlap_train": 0,
+    "sample_id_overlap_train_test": 0
+  },
+  "seed": 42,
+  "sft_1k_is_prefix_subset_of_sft_6k": true,
+  "status": "PASS"
+}

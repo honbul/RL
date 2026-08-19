@@ -17,5 +17,15 @@
 - Commands: `.venv/bin/python -m src.data.generate_examples --output data/dev/core_examples_20.jsonl`; `.venv/bin/python -m pytest -q tests/test_core_examples.py`
 - Major files: `src/dsl/*.py`, `src/rewards.py`, `data/dev/core_examples_20.jsonl`, `tests/test_core_examples.py`
 - Result: 20/20 reference programs passed binary and dense reward; 4 focused tests passed; invalid op/source path/target path rejected
-- Commit: recorded in the next progress update after publication
+- Commit: `908c0e7830908ecf651e6f32775c18fe7e1d2ec3`
 - Next: generate and validate the 20,000-candidate dataset with four shard workers
+
+## Stage 2 — Synthetic dataset generation
+
+- Status: implemented, generated, and verified
+- Completed: 20,000-candidate pool with four parallel workers; SFT, GRPO, dev, IID, linguistic OOD, compositional OOD, and structural OOD splits
+- Commands: `.venv/bin/python -m src.data.generate --config configs/data.yaml`; `.venv/bin/python -m src.data.validate_generated --config configs/data.yaml`
+- Major files: `data/candidates/*.jsonl`, `data/sft/*.jsonl`, `data/grpo/*.jsonl`, `data/dev/dev.jsonl`, `data/test/*.jsonl`, `data/manifests/*.json`
+- Result: 20,000 candidates; 14,500 reference-bearing rows re-executed; exact requested counts; all four leakage checks zero; tokenizer audit max prompt 1,665/2,048 and completion 115/256
+- Commit: recorded in the next progress update after publication
+- Next: complete and smoke-test the SFT, GRPO, vLLM, evaluation, and raw-output runners

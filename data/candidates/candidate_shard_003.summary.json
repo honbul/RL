@@ -1,0 +1,35 @@
+{
+  "first_index": 3,
+  "last_index": 19999,
+  "num_shards": 4,
+  "partition_counts": {
+    "base": 3750,
+    "compositional": 625,
+    "linguistic": 250,
+    "structural": 375
+  },
+  "pattern_counts": {
+    "cast_default": 364,
+    "coalesce_enum": 363,
+    "comp_coalesce_concat_nest": 125,
+    "comp_copy_scale_conditional": 125,
+    "comp_date_split_constant_copy": 125,
+    "comp_filter_copy_constant": 125,
+    "comp_map_mixed": 125,
+    "concat_split": 364,
+    "conditional_copy": 363,
+    "copy_constant": 364,
+    "copy_enum_scale": 363,
+    "default_concat_conditional": 363,
+    "filter_array": 364,
+    "map_array": 364,
+    "nest_flatten": 364,
+    "scale_date": 364,
+    "struct_array_rich": 125,
+    "struct_deep_nest": 125,
+    "struct_long_nested": 125
+  },
+  "rows": 5000,
+  "shard_id": 3,
+  "status": "PASS"
+}

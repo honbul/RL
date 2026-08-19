@@ -1,0 +1,119 @@
+{
+  "difficulty_level_counts": {
+    "0": 3408,
+    "1": 10184,
+    "2": 4408,
+    "3": 500,
+    "4": 1500
+  },
+  "has_array": 4408,
+  "has_condition": 5862,
+  "has_null": 4864,
+  "partition_counts": {
+    "base": 15000,
+    "compositional": 2500,
+    "linguistic": 1000,
+    "structural": 1500
+  },
+  "pattern_counts": {
+    "cast_default": 1455,
+    "coalesce_enum": 1455,
+    "comp_coalesce_concat_nest": 500,
+    "comp_copy_scale_conditional": 500,
+    "comp_date_split_constant_copy": 500,
+    "comp_filter_copy_constant": 500,
+    "comp_map_mixed": 500,
+    "concat_split": 1455,
+    "conditional_copy": 1454,
+    "copy_constant": 1455,
+    "copy_enum_scale": 1454,
+    "default_concat_conditional": 1454,
+    "filter_array": 1454,
+    "map_array": 1454,
+    "nest_flatten": 1455,
+    "scale_date": 1455,
+    "struct_array_rich": 500,
+    "struct_deep_nest": 500,
+    "struct_long_nested": 500
+  },
+  "split_pattern_counts": {
+    "dev": {
+      "cast_default": 46,
+      "coalesce_enum": 46,
+      "concat_split": 46,
+      "conditional_copy": 45,
+      "copy_constant": 45,
+      "copy_enum_scale": 45,
+      "default_concat_conditional": 45,
+      "filter_array": 45,
+      "map_array": 45,
+      "nest_flatten": 46,
+      "scale_date": 46
+    },
+    "grpo": {
+      "cast_default": 363,
+      "coalesce_enum": 363,
+      "concat_split": 363,
+      "conditional_copy": 364,
+      "copy_constant": 364,
+      "copy_enum_scale": 364,
+      "default_concat_conditional": 364,
+      "filter_array": 364,
+      "map_array": 364,
+      "nest_flatten": 364,
+      "scale_date": 363
+    },
+    "sft_6k": {
+      "cast_default": 546,
+      "coalesce_enum": 546,
+      "concat_split": 546,
+      "conditional_copy": 545,
+      "copy_constant": 546,
+      "copy_enum_scale": 545,
+      "default_concat_conditional": 545,
+      "filter_array": 545,
+      "map_array": 545,
+      "nest_flatten": 545,
+      "scale_date": 546
+    },
+    "test_compositional_ood": {
+      "comp_coalesce_concat_nest": 200,
+      "comp_copy_scale_conditional": 200,
+      "comp_date_split_constant_copy": 200,
+      "comp_filter_copy_constant": 200,
+      "comp_map_mixed": 200
+    },
+    "test_iid": {
+      "cast_default": 91,
+      "coalesce_enum": 91,
+      "concat_split": 91,
+      "conditional_copy": 91,
+      "copy_constant": 91,
+      "copy_enum_scale": 91,
+      "default_concat_conditional": 91,
+      "filter_array": 91,
+      "map_array": 91,
+      "nest_flatten": 90,
+      "scale_date": 91
+    },
+    "test_linguistic_ood": {
+      "cast_default": 45,
+      "coalesce_enum": 45,
+      "concat_split": 45,
+      "conditional_copy": 45,
+      "copy_constant": 46,
+      "copy_enum_scale": 46,
+      "default_concat_conditional": 46,
+      "filter_array": 46,
+      "map_array": 46,
+      "nest_flatten": 45,
+      "scale_date": 45
+    },
+    "test_structural_ood": {
+      "struct_array_rich": 167,
+      "struct_deep_nest": 166,
+      "struct_long_nested": 167
+    }
+  },
+  "status": "PASS"
+}
