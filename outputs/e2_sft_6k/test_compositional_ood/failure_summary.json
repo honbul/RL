@@ -1,0 +1,8 @@
+{
+  "dsl_schema_error": 356,
+  "invalid_source_path": 60,
+  "invalid_target_path": 1,
+  "json_parse_error": 1,
+  "runtime_error": 1,
+  "target_schema_error": 13
+}

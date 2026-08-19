@@ -1,0 +1,19 @@
+{
+  "avg_completion_tokens": 78.848,
+  "edge_case_pass_rate": 0.02564102564102564,
+  "executable_rate": 0.158,
+  "field_macro_f1": 0.158,
+  "field_micro_f1": 0.25674908796108636,
+  "generation_wall_seconds": 21.382151789031923,
+  "hidden_case_pass_rate": 0.158,
+  "json_parse_rate": 0.974,
+  "p50_latency_ms": 42.764303578063846,
+  "p95_latency_ms": 42.764303578063846,
+  "peak_vram_mb": 21488.25,
+  "problem_exact_pass_rate": 0.158,
+  "rescored_from_raw": true,
+  "samples": 500,
+  "schema_conformance_rate": 0.158,
+  "split": "test_linguistic_ood",
+  "target_schema_pass_rate": 0.158
+}

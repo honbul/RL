@@ -1,0 +1,24 @@
+bf16: true
+config_path: configs/sft_6k.yaml
+data_path: data/sft/sft_6k.jsonl
+git_commit: 8a6248af6892b47868e77a89e055c48cd8b9bd87
+gradient_accumulation_steps: 16
+gradient_checkpointing: true
+learning_rate: 2.0e-05
+limit: null
+lora:
+  alpha: 32
+  dropout: 0.05
+  r: 16
+max_completion_tokens_observed: 115
+max_length: 2304
+max_prompt_tokens_observed: 685
+max_steps_override: null
+model_config: configs/model.yaml
+num_train_epochs: 1
+output_dir: outputs/e2_sft_6k
+per_device_train_batch_size: 1
+physical_gpu: 0
+rows: 6000
+run_id: e2_sft_6k_seed42
+seed: 42
