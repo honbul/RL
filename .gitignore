@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.cache/
+hf_cache/
+checkpoints/
+wandb/
+*.safetensors
+*.pt
+*.pth
+optimizer*/
+outputs/**/adapter/
+outputs/**/checkpoint-*/

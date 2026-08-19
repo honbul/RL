@@ -1,0 +1,13 @@
+from __future__ import annotations
+
+from src.common import config_parser
+
+
+def main() -> None:
+    parser = config_parser("Train an execution-rewarded policy with GRPO")
+    parser.parse_args()
+    raise SystemExit("GRPO implementation is added in Stage 3")
+
+
+if __name__ == "__main__":
+    main()

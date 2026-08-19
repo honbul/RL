@@ -1,0 +1,15 @@
+seed: 42
+candidate_count: 20000
+num_shards: 4
+hidden_cases:
+  grpo: 8
+  evaluation: 32
+counts:
+  sft_1k: 1000
+  sft_6k: 6000
+  grpo_train: 4000
+  dev: 500
+  test_iid: 1000
+  test_linguistic_ood: 500
+  test_compositional_ood: 1000
+  test_structural_ood: 500
