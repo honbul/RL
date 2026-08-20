@@ -1,0 +1,22 @@
+run_id: clinical_s1_sft_8k_seed42
+model_config: configs/clinical_ie/model.yaml
+data_files:
+  - data/clinical_ie/sft/sft_8k.jsonl
+skip_rows: 0
+max_rows: 8000
+output_dir: outputs/clinical_ie/s1_sft_8k
+parent_adapter: null
+seed: 42
+num_train_epochs: 1
+learning_rate: 2.0e-5
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16
+bf16: true
+gradient_checkpointing: true
+physical_gpu: 0
+max_length: 3584
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: all-linear

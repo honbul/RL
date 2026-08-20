@@ -1,0 +1,10 @@
+run_id: clinical_s2x_sft_32k_seed42
+enabled_if_s1_s2_gain_gte: 0.02
+blocked_pre_gpu: true
+block_reason: requested 8K reserve extension exceeds the fixed 1K reserve in the 40K generation allocation
+available_reserve_rows: 1000
+required_additional_rows: 8000
+model_config: configs/clinical_ie/model.yaml
+output_dir: outputs/clinical_ie/s2x_sft_32k
+parent_adapter: outputs/clinical_ie/s2_sft_24k/adapter
+seed: 42

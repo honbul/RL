@@ -1,0 +1,7 @@
+run_id: clinical_b0_seed42
+model_config: configs/clinical_ie/model.yaml
+output_dir: outputs/clinical_ie/b0_base
+adapter_path: null
+seed: 42
+physical_gpu: 1
+gpu_memory_utilization: 0.85

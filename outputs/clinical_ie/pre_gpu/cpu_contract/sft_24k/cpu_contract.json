@@ -1,0 +1,10 @@
+{
+  "config": "configs/clinical_ie/sft_24k.yaml",
+  "first_sample_id": "clinical_008000",
+  "gpu_initialized": false,
+  "mode": "CPU_DRY_RUN",
+  "model_loaded": false,
+  "output_dir": "outputs/clinical_ie/pre_gpu/cpu_contract/sft_24k",
+  "rows_loaded": 2,
+  "status": "PASS"
+}

@@ -1,0 +1,23 @@
+{
+  "assertion_accuracy": 1.0,
+  "avg_completion_tokens": 0.0,
+  "condition_attribute_f1": 1.0,
+  "condition_object_f1": 1.0,
+  "counterfactual_consistency": null,
+  "encounter_object_f1": 1.0,
+  "event_time_f1": 1.0,
+  "evidence_f1": 1.0,
+  "generation_wall_seconds": 0.0,
+  "graph_f1": 1.0,
+  "json_parse_rate": 1.0,
+  "missing_fact_rate": 0.0,
+  "p50_latency_ms": 0.0,
+  "p95_latency_ms": 0.0,
+  "patient_family_attribution_error_rate": 0.0,
+  "peak_vram_mb": 0.0,
+  "record_exact": 1.0,
+  "relation_f1": 1.0,
+  "samples": 2,
+  "strict_schema_conformance_rate": 1.0,
+  "unsupported_fact_rate": 0.0
+}

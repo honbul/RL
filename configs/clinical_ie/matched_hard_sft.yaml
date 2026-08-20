@@ -1,0 +1,22 @@
+run_id: clinical_s3_matched_hard_sft_seed42
+model_config: configs/clinical_ie/model.yaml
+data_files:
+  - data/clinical_ie/hard/frontier_4k.jsonl
+skip_rows: 0
+max_rows: 4000
+output_dir: outputs/clinical_ie/s3_matched_hard_sft
+parent_adapter: outputs/clinical_ie/s2_sft_24k/adapter
+seed: 42
+num_train_epochs: 1
+learning_rate: 2.0e-5
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16
+bf16: true
+gradient_checkpointing: true
+physical_gpu: 0
+max_length: 3584
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: all-linear

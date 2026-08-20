@@ -1,0 +1,6 @@
+model_id: Qwen/Qwen3-4B-Instruct-2507
+revision: main
+precision: bfloat16
+trust_remote_code: false
+max_prompt_length: 3072
+max_completion_length: 512

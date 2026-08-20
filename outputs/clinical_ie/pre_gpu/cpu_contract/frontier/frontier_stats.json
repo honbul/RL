@@ -1,0 +1,13 @@
+{
+  "all_zero_partial": 0,
+  "eligible_groups": 12,
+  "excluded_all_correct": 0,
+  "excluded_all_schema_invalid": 0,
+  "mixed_success_failure": 6,
+  "mode": "CPU_DRY_RUN",
+  "partial_nonzero": 0,
+  "prompt_groups": 12,
+  "reward_020_080": 6,
+  "selected": 8,
+  "status": "PASS"
+}

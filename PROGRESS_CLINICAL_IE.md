@@ -34,5 +34,15 @@
 - Major files: `data/clinical_ie/candidates/`, `data/clinical_ie/sft/`, `data/clinical_ie/hard/`, `data/clinical_ie/dev/`, `data/clinical_ie/test/`, `data/clinical_ie/manifests/`, `outputs/clinical_ie/pre_gpu/data_generation.log`
 - Result: 40,000 candidates; SFT 8K/24K, hard 8K, dev 2K, five test splits × 1K; 95,000 strict reference rows validated; 500 counterfactual pairs; all sample-ID/topology overlaps 0; all 30 JSONL artifacts under 50MiB
 - GPU work started: false
-- Commit: recorded in the next stage update after publication
+- Commit: `1cb9000dc04bcf7eee64816b2046b44bea636fd0`
 - Next: P4 prepare SFT/GRPO/frontier/evaluation runners and execute CPU-only contract checks
+
+## P4 — Training, frontier, evaluation, and summary runners
+
+- Status: implemented and CPU-verified
+- Commands: `.venv/bin/python -m src.clinical_ie.train_sft --config configs/clinical_ie/sft_8k.yaml --dry-run --limit 2`; `.venv/bin/python -m src.clinical_ie.select_frontier --dry-run`; `.venv/bin/python -m src.clinical_ie.train_grpo --config configs/clinical_ie/grpo.yaml --dry-run`; `.venv/bin/python -m src.clinical_ie.evaluate --run-dir outputs/clinical_ie/pre_gpu/cpu_contract/evaluate --split dev_2k --dry-run --limit 2`; `.venv/bin/python -m src.clinical_ie.summarize --dry-run`
+- Major files: `src/clinical_ie/train_sft.py`, `src/clinical_ie/select_frontier.py`, `src/clinical_ie/train_grpo.py`, `src/clinical_ie/evaluate.py`, `src/clinical_ie/rescore.py`, `src/clinical_ie/summarize.py`, `configs/clinical_ie/*.yaml`
+- Result: all CLI help/config parse/data row/reward/output/raw writer/dummy summary contracts PASS; S1 first row `clinical_000000`, S2 continuation first row `clinical_008000`; gold/error rewards 1.0/0.0; model_loaded=false; gpu_initialized=false
+- S2X note: the fixed 40K plan provides only 1K reserve rows, so the conditional 8K S2X extension is explicitly blocked rather than contaminating the hard frontier pool
+- Commit: recorded in the next stage update after publication
+- Next: P5 write WAITING_FOR_GPU status, README marker, final clean push/readback, and stop

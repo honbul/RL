@@ -1,0 +1,6 @@
+run,dev_graph_f1,iid_graph_f1,ood_graph_f1,evidence_f1,unsupported_fact_rate,status
+B0,0.0,0.0,0.0,0.0,0.1,DUMMY
+S1,0.1,0.1,0.05,0.1,0.1,DUMMY
+S2,0.2,0.2,0.1,0.2,0.1,DUMMY
+S3,0.3,0.3,0.15,0.3,0.1,DUMMY
+R1,0.4,0.4,0.2,0.4,0.1,DUMMY

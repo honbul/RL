@@ -1,0 +1,24 @@
+run_id: clinical_s2_sft_24k_seed42
+model_config: configs/clinical_ie/model.yaml
+data_files:
+  - data/clinical_ie/sft/sft_24k.part-000.jsonl
+  - data/clinical_ie/sft/sft_24k.part-001.jsonl
+  - data/clinical_ie/sft/sft_24k.part-002.jsonl
+skip_rows: 8000
+max_rows: 16000
+output_dir: outputs/clinical_ie/s2_sft_24k
+parent_adapter: outputs/clinical_ie/s1_sft_8k/adapter
+seed: 42
+num_train_epochs: 1
+learning_rate: 2.0e-5
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16
+bf16: true
+gradient_checkpointing: true
+physical_gpu: 0
+max_length: 3584
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: all-linear

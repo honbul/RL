@@ -1,0 +1,9 @@
+{
+  "error_reward": 0.0,
+  "gold_reward": 1.0,
+  "gpu_initialized": false,
+  "mode": "CPU_DRY_RUN",
+  "model_loaded": false,
+  "output_dir": "outputs/clinical_ie/pre_gpu/cpu_contract/grpo",
+  "status": "PASS"
+}

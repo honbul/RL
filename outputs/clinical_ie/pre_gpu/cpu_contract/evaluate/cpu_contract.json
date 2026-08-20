@@ -1,0 +1,8 @@
+{
+  "gpu_initialized": false,
+  "graph_f1": 1.0,
+  "mode": "CPU_DRY_RUN",
+  "model_loaded": false,
+  "rows": 2,
+  "status": "PASS"
+}
