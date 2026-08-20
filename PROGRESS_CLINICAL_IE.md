@@ -57,5 +57,5 @@
 - GPU work started: false
 - Next stage: `G0_GPU_SMOKE`
 - Next command after explicit resume: `PYTHONHASHSEED=42 .venv/bin/python -m src.clinical_ie.train_sft --config configs/clinical_ie/sft_8k.yaml --max-steps 10 --limit 100 --output-dir outputs/clinical_ie/smoke/sft_10_steps`
-- Commit: recorded in the final publication follow-up
+- Commit: `a1e00d5dd603c89d0700650315ef94039e24ba4e`
 - Next: stop; do not poll GPU or keep background workers
