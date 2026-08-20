@@ -44,5 +44,18 @@
 - Major files: `src/clinical_ie/train_sft.py`, `src/clinical_ie/select_frontier.py`, `src/clinical_ie/train_grpo.py`, `src/clinical_ie/evaluate.py`, `src/clinical_ie/rescore.py`, `src/clinical_ie/summarize.py`, `configs/clinical_ie/*.yaml`
 - Result: all CLI help/config parse/data row/reward/output/raw writer/dummy summary contracts PASS; S1 first row `clinical_000000`, S2 continuation first row `clinical_008000`; gold/error rewards 1.0/0.0; model_loaded=false; gpu_initialized=false
 - S2X note: the fixed 40K plan provides only 1K reserve rows, so the conditional 8K S2X extension is explicitly blocked rather than contaminating the hard frontier pool
-- Commit: recorded in the next stage update after publication
+- Commit: `ed7e7f347d7f310aa5a794f4f1840657e475d6a2`
 - Next: P5 write WAITING_FOR_GPU status, README marker, final clean push/readback, and stop
+
+## P5 — WAITING_FOR_GPU
+
+- Status: `WAITING_FOR_GPU`
+- Commands: `git status --short`; `git rev-parse HEAD`; `git ls-remote origin refs/heads/experiment/clinical-ie-rlvr`
+- Major files: `outputs/clinical_ie/pre_gpu/status.json`, `PROGRESS_CLINICAL_IE.md`, `README.md`
+- Data: 40,000 candidates; manifest `data/clinical_ie/manifests/data_manifest.json`; SFT 8K/24K; hard 8K; dev 2K; test 5K
+- Last completed implementation commit: `ed7e7f347d7f310aa5a794f4f1840657e475d6a2`
+- GPU work started: false
+- Next stage: `G0_GPU_SMOKE`
+- Next command after explicit resume: `PYTHONHASHSEED=42 .venv/bin/python -m src.clinical_ie.train_sft --config configs/clinical_ie/sft_8k.yaml --max-steps 10 --limit 100 --output-dir outputs/clinical_ie/smoke/sft_10_steps`
+- Commit: recorded in the final publication follow-up
+- Next: stop; do not poll GPU or keep background workers

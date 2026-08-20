@@ -1,0 +1,13 @@
+{
+  "status": "WAITING_FOR_GPU",
+  "pre_gpu_stages_completed": [
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ],
+  "next_stage": "G0_GPU_SMOKE",
+  "branch": "experiment/clinical-ie-rlvr",
+  "gpu_work_started": false
+}
