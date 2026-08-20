@@ -1,0 +1,16 @@
+seed: 42
+candidate_count: 40000
+workers: 8
+candidate_shards: 16
+max_jsonl_mb: 48
+counts:
+  sft_8k: 8000
+  sft_24k: 24000
+  hard_candidates: 8000
+  dev: 2000
+  test_iid_hard: 1000
+  test_linguistic_ood: 1000
+  test_compositional_ood: 1000
+  test_long_context_ood: 1000
+  test_counterfactual_ood: 1000
+  reserve: 1000

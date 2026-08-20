@@ -1,0 +1,12 @@
+{
+  "end": 37500,
+  "output": "data/clinical_ie/candidates/candidate_shard_014.jsonl",
+  "regime_counts": {
+    "test_compositional_ood": 1000,
+    "test_linguistic_ood": 1000,
+    "test_long_context_ood": 500
+  },
+  "rows": 2500,
+  "start": 35000,
+  "status": "PASS"
+}

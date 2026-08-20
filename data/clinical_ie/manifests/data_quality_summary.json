@@ -1,0 +1,37 @@
+{
+  "concept_count": 36,
+  "difficulty_counts": {
+    "1": 8400,
+    "2": 8700,
+    "3": 9350,
+    "4": 8850,
+    "5": 4700
+  },
+  "difficulty_tag_counts": {
+    "copy_forward_conflict": 13550,
+    "counterfactual_assertion_flip": 500,
+    "family_distractor": 13550,
+    "heldout_composition": 1000,
+    "long_context": 4700,
+    "long_distance_evidence": 22900,
+    "multi_hospital": 13550,
+    "negation": 1000,
+    "relative_time": 3358,
+    "resolved": 18982,
+    "ruled_out": 19042,
+    "status_transition": 22900,
+    "suspected": 19150
+  },
+  "document_type_counts": {
+    "discharge_summary": 12923,
+    "emergency_note": 13058,
+    "inpatient_note": 12979,
+    "outpatient_followup": 12985,
+    "outpatient_initial": 12939,
+    "problem_list": 12978,
+    "referral_note": 13008,
+    "screening_result": 12873
+  },
+  "status": "PASS",
+  "synthetic_only": true
+}

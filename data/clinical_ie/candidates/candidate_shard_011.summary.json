@@ -1,0 +1,10 @@
+{
+  "end": 30000,
+  "output": "data/clinical_ie/candidates/candidate_shard_011.jsonl",
+  "regime_counts": {
+    "hard": 2500
+  },
+  "rows": 2500,
+  "start": 27500,
+  "status": "PASS"
+}

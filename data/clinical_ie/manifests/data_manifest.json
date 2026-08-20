@@ -1,0 +1,206 @@
+{
+  "candidate_count": 40000,
+  "candidate_files": [
+    {
+      "bytes": 11213627,
+      "path": "data/clinical_ie/candidates/candidate_shard_000.jsonl",
+      "rows": 2500
+    },
+    {
+      "bytes": 11232525,
+      "path": "data/clinical_ie/candidates/candidate_shard_001.jsonl",
+      "rows": 2500
+    },
+    {
+      "bytes": 11205332,
+      "path": "data/clinical_ie/candidates/candidate_shard_002.jsonl",
+      "rows": 2500
+    },
+    {
+      "bytes": 11222240,
+      "path": "data/clinical_ie/candidates/candidate_shard_003.jsonl",
+      "rows": 2500
+    },
+    {
+      "bytes": 11219323,
+      "path": "data/clinical_ie/candidates/candidate_shard_004.jsonl",
+      "rows": 2500
+    },
+    {
+      "bytes": 11245903,
+      "path": "data/clinical_ie/candidates/candidate_shard_005.jsonl",
+      "rows": 2500
+    },
+    {
+      "bytes": 11157481,
+      "path": "data/clinical_ie/candidates/candidate_shard_006.jsonl",
+      "rows": 2500
+    },
+    {
+      "bytes": 11278868,
+      "path": "data/clinical_ie/candidates/candidate_shard_007.jsonl",
+      "rows": 2500
+    },
+    {
+      "bytes": 11207915,
+      "path": "data/clinical_ie/candidates/candidate_shard_008.jsonl",
+      "rows": 2500
+    },
+    {
+      "bytes": 15777868,
+      "path": "data/clinical_ie/candidates/candidate_shard_009.jsonl",
+      "rows": 2500
+    },
+    {
+      "bytes": 22607247,
+      "path": "data/clinical_ie/candidates/candidate_shard_010.jsonl",
+      "rows": 2500
+    },
+    {
+      "bytes": 22689886,
+      "path": "data/clinical_ie/candidates/candidate_shard_011.jsonl",
+      "rows": 2500
+    },
+    {
+      "bytes": 22332027,
+      "path": "data/clinical_ie/candidates/candidate_shard_012.jsonl",
+      "rows": 2500
+    },
+    {
+      "bytes": 21474499,
+      "path": "data/clinical_ie/candidates/candidate_shard_013.jsonl",
+      "rows": 2500
+    },
+    {
+      "bytes": 26663093,
+      "path": "data/clinical_ie/candidates/candidate_shard_014.jsonl",
+      "rows": 2500
+    },
+    {
+      "bytes": 25122739,
+      "path": "data/clinical_ie/candidates/candidate_shard_015.jsonl",
+      "rows": 2500
+    }
+  ],
+  "counterfactual_pairs": {
+    "cross_split_leakage": 0,
+    "pairs": 500,
+    "rows": 1000
+  },
+  "dataset_version": "clinical_ie_synthetic_v1",
+  "generation_code_commit": "f21c3f706d945c0d470625439454e26905375991",
+  "generation_command": ".venv/bin/python -m src.clinical_ie.data.generate --config configs/clinical_ie/data.yaml --workers 8",
+  "generation_seed": 42,
+  "gpu_work_started": false,
+  "leakage_checks": {
+    "dev_test_topology_overlap": 0,
+    "train_dev_topology_overlap": 0,
+    "train_test_topology_overlap": 0
+  },
+  "regime_counts": {
+    "dev": 2000,
+    "hard": 8000,
+    "reserve": 1000,
+    "sft": 24000,
+    "test_compositional_ood": 1000,
+    "test_counterfactual": 1000,
+    "test_iid_hard": 1000,
+    "test_linguistic_ood": 1000,
+    "test_long_context_ood": 1000
+  },
+  "split_files": {
+    "dev": [
+      {
+        "bytes": 16490266,
+        "path": "data/clinical_ie/dev/dev_2k.jsonl",
+        "rows": 2000
+      }
+    ],
+    "hard_candidates": [
+      {
+        "bytes": 50327893,
+        "path": "data/clinical_ie/hard/hard_candidates_8k.part-000.jsonl",
+        "rows": 5566
+      },
+      {
+        "bytes": 22243778,
+        "path": "data/clinical_ie/hard/hard_candidates_8k.part-001.jsonl",
+        "rows": 2434
+      }
+    ],
+    "hard_prompts": [
+      {
+        "bytes": 46329252,
+        "path": "data/clinical_ie/hard/hard_prompts.jsonl",
+        "rows": 8000
+      }
+    ],
+    "hard_references": [
+      {
+        "bytes": 26498419,
+        "path": "data/clinical_ie/hard/hard_references.jsonl",
+        "rows": 8000
+      }
+    ],
+    "sft_24k": [
+      {
+        "bytes": 50330558,
+        "path": "data/clinical_ie/sft/sft_24k.part-000.jsonl",
+        "rows": 9744
+      },
+      {
+        "bytes": 50331021,
+        "path": "data/clinical_ie/sft/sft_24k.part-001.jsonl",
+        "rows": 9718
+      },
+      {
+        "bytes": 23558433,
+        "path": "data/clinical_ie/sft/sft_24k.part-002.jsonl",
+        "rows": 4538
+      }
+    ],
+    "sft_8k": [
+      {
+        "bytes": 41386491,
+        "path": "data/clinical_ie/sft/sft_8k.jsonl",
+        "rows": 8000
+      }
+    ],
+    "test_compositional_ood": [
+      {
+        "bytes": 10764374,
+        "path": "data/clinical_ie/test/test_compositional_ood.jsonl",
+        "rows": 1000
+      }
+    ],
+    "test_counterfactual_ood": [
+      {
+        "bytes": 10889630,
+        "path": "data/clinical_ie/test/test_counterfactual_ood.jsonl",
+        "rows": 1000
+      }
+    ],
+    "test_iid_hard": [
+      {
+        "bytes": 9105646,
+        "path": "data/clinical_ie/test/test_iid_hard.jsonl",
+        "rows": 1000
+      }
+    ],
+    "test_linguistic_ood": [
+      {
+        "bytes": 9323192,
+        "path": "data/clinical_ie/test/test_linguistic_ood.jsonl",
+        "rows": 1000
+      }
+    ],
+    "test_long_context_ood": [
+      {
+        "bytes": 13137012,
+        "path": "data/clinical_ie/test/test_long_context_ood.jsonl",
+        "rows": 1000
+      }
+    ]
+  },
+  "status": "PASS"
+}

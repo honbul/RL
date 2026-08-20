@@ -1,0 +1,15 @@
+{
+  "counterfactual_pair_count": 500,
+  "heldout_renderer_family": "heldout_linguistic",
+  "overlap": {
+    "dev_test_topology_overlap": 0,
+    "train_dev_topology_overlap": 0,
+    "train_test_topology_overlap": 0
+  },
+  "status": "PASS",
+  "unique_topologies": {
+    "dev": 2000,
+    "test": 5000,
+    "train": 32000
+  }
+}

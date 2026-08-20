@@ -1,0 +1,175 @@
+{
+  "candidate_count": 40000,
+  "candidate_shards": 16,
+  "shards": [
+    {
+      "end": 2500,
+      "output": "data/clinical_ie/candidates/candidate_shard_000.jsonl",
+      "regime_counts": {
+        "sft": 2500
+      },
+      "rows": 2500,
+      "start": 0,
+      "status": "PASS"
+    },
+    {
+      "end": 5000,
+      "output": "data/clinical_ie/candidates/candidate_shard_001.jsonl",
+      "regime_counts": {
+        "sft": 2500
+      },
+      "rows": 2500,
+      "start": 2500,
+      "status": "PASS"
+    },
+    {
+      "end": 7500,
+      "output": "data/clinical_ie/candidates/candidate_shard_002.jsonl",
+      "regime_counts": {
+        "sft": 2500
+      },
+      "rows": 2500,
+      "start": 5000,
+      "status": "PASS"
+    },
+    {
+      "end": 10000,
+      "output": "data/clinical_ie/candidates/candidate_shard_003.jsonl",
+      "regime_counts": {
+        "sft": 2500
+      },
+      "rows": 2500,
+      "start": 7500,
+      "status": "PASS"
+    },
+    {
+      "end": 12500,
+      "output": "data/clinical_ie/candidates/candidate_shard_004.jsonl",
+      "regime_counts": {
+        "sft": 2500
+      },
+      "rows": 2500,
+      "start": 10000,
+      "status": "PASS"
+    },
+    {
+      "end": 15000,
+      "output": "data/clinical_ie/candidates/candidate_shard_005.jsonl",
+      "regime_counts": {
+        "sft": 2500
+      },
+      "rows": 2500,
+      "start": 12500,
+      "status": "PASS"
+    },
+    {
+      "end": 17500,
+      "output": "data/clinical_ie/candidates/candidate_shard_006.jsonl",
+      "regime_counts": {
+        "sft": 2500
+      },
+      "rows": 2500,
+      "start": 15000,
+      "status": "PASS"
+    },
+    {
+      "end": 20000,
+      "output": "data/clinical_ie/candidates/candidate_shard_007.jsonl",
+      "regime_counts": {
+        "sft": 2500
+      },
+      "rows": 2500,
+      "start": 17500,
+      "status": "PASS"
+    },
+    {
+      "end": 22500,
+      "output": "data/clinical_ie/candidates/candidate_shard_008.jsonl",
+      "regime_counts": {
+        "sft": 2500
+      },
+      "rows": 2500,
+      "start": 20000,
+      "status": "PASS"
+    },
+    {
+      "end": 25000,
+      "output": "data/clinical_ie/candidates/candidate_shard_009.jsonl",
+      "regime_counts": {
+        "hard": 1000,
+        "sft": 1500
+      },
+      "rows": 2500,
+      "start": 22500,
+      "status": "PASS"
+    },
+    {
+      "end": 27500,
+      "output": "data/clinical_ie/candidates/candidate_shard_010.jsonl",
+      "regime_counts": {
+        "hard": 2500
+      },
+      "rows": 2500,
+      "start": 25000,
+      "status": "PASS"
+    },
+    {
+      "end": 30000,
+      "output": "data/clinical_ie/candidates/candidate_shard_011.jsonl",
+      "regime_counts": {
+        "hard": 2500
+      },
+      "rows": 2500,
+      "start": 27500,
+      "status": "PASS"
+    },
+    {
+      "end": 32500,
+      "output": "data/clinical_ie/candidates/candidate_shard_012.jsonl",
+      "regime_counts": {
+        "dev": 500,
+        "hard": 2000
+      },
+      "rows": 2500,
+      "start": 30000,
+      "status": "PASS"
+    },
+    {
+      "end": 35000,
+      "output": "data/clinical_ie/candidates/candidate_shard_013.jsonl",
+      "regime_counts": {
+        "dev": 1500,
+        "test_iid_hard": 1000
+      },
+      "rows": 2500,
+      "start": 32500,
+      "status": "PASS"
+    },
+    {
+      "end": 37500,
+      "output": "data/clinical_ie/candidates/candidate_shard_014.jsonl",
+      "regime_counts": {
+        "test_compositional_ood": 1000,
+        "test_linguistic_ood": 1000,
+        "test_long_context_ood": 500
+      },
+      "rows": 2500,
+      "start": 35000,
+      "status": "PASS"
+    },
+    {
+      "end": 40000,
+      "output": "data/clinical_ie/candidates/candidate_shard_015.jsonl",
+      "regime_counts": {
+        "reserve": 1000,
+        "test_counterfactual": 1000,
+        "test_long_context_ood": 500
+      },
+      "rows": 2500,
+      "start": 37500,
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "workers": 8
+}
