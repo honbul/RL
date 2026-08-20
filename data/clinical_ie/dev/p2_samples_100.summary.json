@@ -1,0 +1,10 @@
+{
+  "end": 100,
+  "output": "data/clinical_ie/dev/p2_samples_100.jsonl",
+  "regime_counts": {
+    "sft": 100
+  },
+  "rows": 100,
+  "start": 0,
+  "status": "PASS"
+}
